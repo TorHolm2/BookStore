@@ -35,12 +35,10 @@ To be able to sell books the administrator of the web shop must be able to creat
 * That a book is added to the store.
 * That a book only is added if it is in a valid state (i.e., non-negative price, title/author/ISBN is a string longer than one character, etc.)
 
-### Suggested tests
-* Make a bookstore that contains at least three different books with the following attributes: ISBN (string), title(text), author (text), price (positive number), number on stock (zero, or positive)
-* Add a book with invalid values (ISBN/Title/etc.) and make sure the store throws an ArgumentException
+### Suggested tests  
+* Make a store that contains at least three different books with the following attributes: ISBN (string), title(text), author (text), price (positive number), number on stock (zero, or positive)
+* Add a book with invalid values (ISBN/Title/etc.) and make sure the collection throws an ArgumentException
 
-#### Note
-Remember to encapsulate your data. Don’t make an inner List<Book> public. Instead create methods on the BookContainer for Adding, Removing and searching the inner collection as necessary.  
 
 ---
  
