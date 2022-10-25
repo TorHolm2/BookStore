@@ -1,8 +1,8 @@
 # Test Driven Development
 
-To try out Test Driven Development (TDD) we will develop the model layer for a web shop selling books. 
+To try out the Test First approach from XP, we will develop the model layer for a web shop selling books. 
 
-The web shop will be created using TDD or “test first” principle. You should be familiar with how to create unit tests in C# already. If not, see this link for information [Testing in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/test/improve-code-quality?view=vs-2022). The link points to a main page and a lot of the information can be obtained through subpages so remember to read those as well.
+The web shop will be created using the Test First principle. You should be familiar with how to create unit tests in C# already. If not, see this link for information [Testing in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/test/improve-code-quality?view=vs-2022). The link points to a main page and a lot of the information can be obtained through subpages so remember to read those as well.
 
 ## Working together  
 
