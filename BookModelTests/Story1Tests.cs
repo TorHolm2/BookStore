@@ -20,9 +20,9 @@ namespace BookModelTests
         {
             // Arrange
             Store store = new();
-            Book book1 = new(Title: "Harry Potter 1", Author: "J.K. Rowling", ISBN: "1234-12342-244");
-            Book book2 = new("Harry Potter 2", "J.K. Rowling", "1234-12342-245");
-            Book book3 = new("Harry Potter 3", "J.K. Rowling", "1234-12342-246");
+            Book book1 = new(Title: "Harry Potter 1", Author: "J.K. Rowling", ISBN: "1234-12342-244", Price: 50);
+            Book book2 = new("Harry Potter 2", "J.K. Rowling", "1234-12342-245", 50);
+            Book book3 = new("Harry Potter 3", "J.K. Rowling", "1234-12342-246", 50);
 
             // Act
             store.Add(book1, 4);
@@ -31,6 +31,20 @@ namespace BookModelTests
 
             //Assert
             Assert.Equal(18, store.BookCount());
+        }
+
+        [Fact]
+        public void TestCreateBookWithNegativePrice()
+        {
+            // Arrange
+            Store store = new();
+            Book book6 = new(Title: "Harry", Author: "J.K R", ISBN: "1234-12345-123", Price: -500);
+
+            // Act
+            store.Add(book6, 4);
+
+            // Assert
+            Assert.Equal(0, store.BookCount());
         }
     }
 }
