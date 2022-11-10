@@ -1,3 +1,5 @@
+using BookShop.Model;
+
 namespace BookModelTests
 {
     public class Story1Tests
@@ -12,5 +14,23 @@ namespace BookModelTests
         // * Make a store that contains at least three different books with the following attributes: ISBN(string),
         //   title(text), author(text), price(positive number), number on stock(zero, or positive)
         // * Add a book with invalid values(ISBN/Title/etc.) and make sure the collection throws an ArgumentException
+
+        [Fact]
+        public void TestCreateStoreWithBooks()
+        {
+            // Arrange
+            Store store = new();
+            Book book1 = new(Title: "Harry Potter 1", Author: "J.K. Rowling", ISBN: "1234-12342-244");
+            Book book2 = new("Harry Potter 2", "J.K. Rowling", "1234-12342-245");
+            Book book3 = new("Harry Potter 3", "J.K. Rowling", "1234-12342-246");
+
+            // Act
+            store.Add(book1, 4);
+            store.Add(book2, 4);
+            store.Add(book3, 10);
+
+            //Assert
+            Assert.Equal(18, store.BookCount());
+        }
     }
 }
