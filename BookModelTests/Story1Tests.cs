@@ -1,10 +1,3 @@
-
-
-using static System.Formats.Asn1.AsnWriter;
-using static System.Net.Mime.MediaTypeNames;
-using System.Collections.Generic;
-using System.ComponentModel;
-
 namespace BookModelTests
 {
     public class Story1Tests
